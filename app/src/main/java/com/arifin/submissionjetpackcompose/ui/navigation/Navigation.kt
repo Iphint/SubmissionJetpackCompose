@@ -10,11 +10,13 @@ import com.arifin.submissionjetpackcompose.ui.screen.SplashScreen
 @Composable
 fun Navigation() {
     val navController = rememberNavController()
+    val splash = "splashScreen"
+    val main = "foodApp"
     NavHost(navController, startDestination = "splashScreen") {
-        composable("splashScreen") {
+        composable(splash) {
             SplashScreen(navController)
         }
-        composable("foodApp") {
+        composable(main) {
             FoodApp(navController)
         }
     }
